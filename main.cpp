@@ -2,6 +2,7 @@
 #include <map>
 #include <string>
 #include <variant>
+#include <stdexcept>
 
 //Ejercicio 1: Estructura básica
 class environment {
@@ -23,10 +24,10 @@ class environment {
                 }
                 else {
                     std::cout << "Variable '" << variable << "' already exists in the environment with the same value." << std::endl;
-
                 }
             }
         }
+
 //ejercicio 3
         std::string lookup (const std::string& variable) {
             if (env.find(variable) != env.end()) {
