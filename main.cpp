@@ -11,9 +11,12 @@ class environment {
         void insert(const std::string& variable, const std::string& value) {
 
             if (env.find(variable) == env.end()) {
-                env.insert(std::pair<std::string, std::string>(variable, value));
-            } else {
                 env[variable] = value;
+                std::cout << "Variable '" << variable << "' added to environment with value: " << value << std::endl;
+
+            } else {
+                std::cerr << "Variable '" << variable << "' already exists in the environment." << std::endl;
+
             }
         }
 };
