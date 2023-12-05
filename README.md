@@ -20,4 +20,4 @@ Tipo test:
 
 4. ¿Qué función cumple el método from_json_string() en la clase Variant?
 
-    a) Convierte una cadena JSON en un objeto Variant
+    c) Parsea un objeto JSON a un objeto Variant
