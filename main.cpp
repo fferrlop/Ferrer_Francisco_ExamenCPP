@@ -46,7 +46,9 @@ class environment {
                 throw std::invalid_argument("Variable '" + variable + "' does not exist in the environment. Cannot remove.");
             }
         }
-
+    bool exists(const std::string& variable) {
+        return env.find(variable) != env.end();
+    }
 };
 
 
