@@ -23,7 +23,10 @@ class environment {
 
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+
+    environment env;
+
+
     return 0;
 }
 
