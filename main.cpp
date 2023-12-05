@@ -1,6 +1,7 @@
 #include <iostream>
 #include <map>
 #include <string>
+#include <variant>
 
 //Ejercicio 1: Estructura básica
 class environment {
