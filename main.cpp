@@ -15,6 +15,10 @@ class environment {
                 std::cout << "Variable '" << variable << "' added to environment with value: " << value << std::endl;
 
             } else {
+
+                if (env[variable] != value) {
+                    throw std::invalid_argument("Variable '" + variable + "' already exists in the environment with a different value.");
+                }
                 std::cerr << "Variable '" << variable << "' already exists in the environment." << std::endl;
 
             }
