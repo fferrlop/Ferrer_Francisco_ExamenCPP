@@ -26,7 +26,11 @@ int main() {
 
     environment env;
 
+          env.insert("Person_age", "20");
+          env.insert("Person_name", "Fran");
+          env.insert("Person_height", "1.74");
 
     return 0;
+
 }
 
