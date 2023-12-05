@@ -41,15 +41,19 @@ class environment {
 int main() {
 //ejercicio 2
     environment env;
+        try { //ejercicio 4
+            env.insert("Person_age", "20");
+            env.insert("Person_name", "Fran");
+            env.insert("Person_height", "1.74");
 
-          env.insert("Person_age", "20");
-          env.insert("Person_name", "Fran");
-          env.insert("Person_height", "1.74");
-
-//ejercicio 3
-    std::cout << "Person_age: " << env.lookup("Person_age") << std::endl;
-    std::cout << "Person_gender: " << env.lookup("Person_gender") << std::endl; //Este devolvera que no exite
-    return 0;
+            //ejercicio 3
+            std::cout << "Person_age: " << env.lookup("Person_age") << std::endl;
+            std::cout << "Person_gender: " << env.lookup("Person_gender") << std::endl; //Este devolvera que no exite
+        }
+        catch (const std::invalid_argument& e) { //ejercicio 4
+            std::cout << e.what() << std::endl;
+        }
+return 0;
 
 }
 
