@@ -15,24 +15,24 @@ class environment {
                 std::cout << "Variable '" << variable << "' added to environment with value: " << value << std::endl;
 
             } else {
-
+//Ejercicio 4:
                 if (env[variable] != value) {
                     throw std::invalid_argument("Variable '" + variable + "' already exists in the environment with a different value.");
+
                 }
                 else {
                     std::cout << "Variable '" << variable << "' already exists in the environment with the same value." << std::endl;
-                }
-                std::cerr << "Variable '" << variable << "' already exists in the environment." << std::endl;
 
+                }
             }
         }
 //ejercicio 3
         std::string lookup (const std::string& variable) {
             if (env.find(variable) != env.end()) {
                 return env[variable];
-            } else {
-                std::cerr << "Variable '" << variable << "' does not exist in the environment." << std::endl;
-                return "";
+            }
+            else {
+                throw std::invalid_argument("Variable '" + variable + "' does not exist in the environment.");
             }
         }
 };
