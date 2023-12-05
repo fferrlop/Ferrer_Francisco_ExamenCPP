@@ -7,7 +7,8 @@
 class environment {
     private:
         std::map<std::string, std::string> env;
-//Ejercicio 2:
+
+//Ejercicio 2:Insertar Símbolos
     public:
         void insert(const std::string& variable, const std::string& value) {
 
@@ -15,8 +16,9 @@ class environment {
                 env[variable] = value;
                 std::cout << "Variable '" << variable << "' added to environment with value: " << value << std::endl;
 
-            } else {
-//Ejercicio 4:
+            }
+            else {
+//Ejercicio 4: Gestión de Errores
                 if (env[variable] != value) {
                     throw std::invalid_argument("Variable '" + variable + "' already exists in the environment with a different value.");
 
@@ -27,7 +29,7 @@ class environment {
             }
         }
 
-//ejercicio 3
+//ejercicio 3: Búsqueda de Símbolos:
         std::string lookup (const std::string& variable) {
             if (env.find(variable) != env.end()) {
                 return env[variable];
@@ -53,22 +55,24 @@ class environment {
 
 
 int main() {
-//ejercicio 2
+//ejercicio 2: Insertar Símbolos
     environment env;
         try { //ejercicio 4
             env.insert("Person_age", "20");
             env.insert("Person_name", "Fran");
             env.insert("Person_height", "1.74");
 
-            //ejercicio 3
+            //ejercicio 3: Búsqueda de Símbolos:
             std::cout << "Person_age: " << env.lookup("Person_age") << std::endl;
             std::cout << "Person_gender exists? " << (env.exists("Person_gender") ? "Yes" : "No") << std::endl;
-        //Ejercicio 6:
+
+            //Ejercicio 6:Expandiendo Funcionalidades
         env.remove("Person_age");
         std::cout << "Person_age: " << env.lookup("Person_age") << std::endl; //Este devolvera ahora que no exite
 
+            //ejercicio 4: Gestión de Errores
             }
-            catch (const std::invalid_argument& e) { //ejercicio 4
+            catch (const std::invalid_argument& e) {
                 std::cout << e.what() << std::endl;
             }
 return 0;
