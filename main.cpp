@@ -1,4 +1,6 @@
 #include <iostream>
+#include <map>
+#include <string>
 
 class environment {
 private:
