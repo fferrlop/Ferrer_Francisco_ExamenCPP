@@ -4,6 +4,8 @@ Programación:
 https://github.com/fferrlop/Ferrer_Francisco_ExamenCPP.git
 
 
+Dentro del main estarán los ejercicios indicado que parte corresponde a cada ejercicio 
+
 Tipo test:
 
 1. ¿Cuál es el propósito principal de la clase Variant en el lenguaje Tiny Lisp?
