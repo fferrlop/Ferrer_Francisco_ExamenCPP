@@ -1,7 +1,6 @@
 #include <iostream>
 #include <map>
 #include <string>
-#include <variant>
 #include <stdexcept>
 
 //Ejercicio 1: Estructura básica
@@ -37,6 +36,17 @@ class environment {
                 throw std::invalid_argument("Variable '" + variable + "' does not exist in the environment.");
             }
         }
+
+        void remove(const std::string& variable) {
+            auto it = env.find(variable);
+            if (it != env.end()) {
+                env.erase(it);
+                std::cout << "Variable '" << variable << "' removed from environment." << std::endl;
+            } else {
+                throw std::invalid_argument("Variable '" + variable + "' does not exist in the environment. Cannot remove.");
+            }
+        }
+
 };
 
 
