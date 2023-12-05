@@ -62,11 +62,15 @@ int main() {
 
             //ejercicio 3
             std::cout << "Person_age: " << env.lookup("Person_age") << std::endl;
-            std::cout << "Person_gender: " << env.lookup("Person_gender") << std::endl; //Este devolvera que no exite
-        }
-        catch (const std::invalid_argument& e) { //ejercicio 4
-            std::cout << e.what() << std::endl;
-        }
+            std::cout << "Person_gender exists? " << (env.exists("Person_gender") ? "Yes" : "No") << std::endl;
+        //Ejercicio 6:
+        env.remove("Person_age");
+        std::cout << "Person_age: " << env.lookup("Person_age") << std::endl; //Este devolvera ahora que no exite
+
+            }
+            catch (const std::invalid_argument& e) { //ejercicio 4
+                std::cout << e.what() << std::endl;
+            }
 return 0;
 
 }
