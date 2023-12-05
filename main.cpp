@@ -19,6 +19,9 @@ class environment {
                 if (env[variable] != value) {
                     throw std::invalid_argument("Variable '" + variable + "' already exists in the environment with a different value.");
                 }
+                else {
+                    std::cout << "Variable '" << variable << "' already exists in the environment with the same value." << std::endl;
+                }
                 std::cerr << "Variable '" << variable << "' already exists in the environment." << std::endl;
 
             }
