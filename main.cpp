@@ -6,7 +6,7 @@
 class environment {
     private:
         std::map<std::string, std::string> env;
-
+//Ejercicio 2:
     public:
         void insert(const std::string& variable, const std::string& value) {
 
@@ -19,11 +19,20 @@ class environment {
 
             }
         }
+
+        std::string lookup (const std::string& variable) {
+            if (env.find(variable) != env.end()) {
+                return env[variable];
+            } else {
+                std::cerr << "Variable '" << variable << "' does not exist in the environment." << std::endl;
+                return "";
+            }
+        }
 };
 
 
 int main() {
-
+//ejercicio 2
     environment env;
 
           env.insert("Person_age", "20");
