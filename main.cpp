@@ -10,7 +10,11 @@ class environment {
     public:
         void insert(const std::string& variable, const std::string& value) {
 
-            if
+            if (env.find(variable) == env.end()) {
+                env.insert(std::pair<std::string, std::string>(variable, value));
+            } else {
+                env[variable] = value;
+            }
         }
 };
 
