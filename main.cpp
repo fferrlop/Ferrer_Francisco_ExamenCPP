@@ -19,7 +19,7 @@ class environment {
 
             }
         }
-
+//ejercicio 3
         std::string lookup (const std::string& variable) {
             if (env.find(variable) != env.end()) {
                 return env[variable];
@@ -39,6 +39,9 @@ int main() {
           env.insert("Person_name", "Fran");
           env.insert("Person_height", "1.74");
 
+//ejercicio 3
+    std::cout << "Person_age: " << env.lookup("Person_age") << std::endl;
+    std::cout << "Person_gender: " << env.lookup("Person_gender") << std::endl; //Este devolvera que no exite
     return 0;
 
 }
